@@ -9,9 +9,9 @@ Push_Right = 2
 
 # Key mapping
 arrow_keys = {
-    '\x1b[D': Push_Left,
-    '\x1b[B': No_Push,
-    '\x1b[C': Push_Right}
+    'a': Push_Left,
+    's': No_Push,
+    'd': Push_Right}
 
 env = gym.make('MountainCar-v0')
 
@@ -50,4 +50,4 @@ for episode in range(20): # n_trajectories : 20
 np_trajectories = np.array(trajectories, float)
 print("np_trajectories.shape", np_trajectories.shape)
 
-np.save("expert_demo", arr=np_trajectories)
+# np.save("expert_demo", arr=np_trajectories)
