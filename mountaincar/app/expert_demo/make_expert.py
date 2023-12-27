@@ -36,6 +36,8 @@ for episode in range(20): # n_trajectories : 20
         action = arrow_keys[key]
         state, reward, done, _ = env.step(action)
 
+        print(state, reward)
+
         if state[0] >= env.env.goal_position and step > 129: # trajectory_length : 130
             break
 
